@@ -1,0 +1,169 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+@font-face {
+  font-family: 'Source Code';
+  src: url("../font/sourcecodepro-light.eot");
+  src: url("../font/sourcecodepro-light.eot?#iefix") format('embedded-opentype'), url("../font/sourcecodepro-light.woff") format('woff'), url("../font/sourcecodepro-light.ttf") format('truetype'), url("../font/sourcecodepro-light.svg#Source Code") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+.giallo {
+  color: #eab700;
+}
+.rosso {
+  color: #c82829;
+}
+.blu {
+  color: #4271ae;
+}
+.verde {
+  color: #718c00;
+}
+.viola {
+  color: #8959a8;
+}
+.grigio {
+  color: #999;
+}
+body,
+html {
+  min-height: 100%;
+  width: 100%;
+}
+body {
+  font-family: 'Source Code', 'Courier', monospace;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  color: #343838;
+  font-size: 13px;
+  line-height: 18px;
+}
+body #container {
+  text-align: left;
+  padding: 15px;
+}
+body #container h1 {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 5px;
+}
+body #container a,
+body #container a:link,
+body #container a:visited,
+body #container a:active {
+  color: #4271ae;
+}
+body #container #sidebar {
+  padding-right: 6.382978723404255%;
+}
+body #container #main {
+  border-left: 1px dotted rgba(153,153,153,0.2);
+  padding-left: 6.382978723404255%;
+}
+#logo {
+  width: 150px;
+  height: auto;
+}
+#plastic {
+  width: 170px;
+  height: auto;
+}
+@media only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  #logo {
+    width: 300px;
+    height: auto;
+  }
+  #plastic {
+    width: 340px;
+    height: auto;
+  }
+}

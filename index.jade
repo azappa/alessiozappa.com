@@ -1,0 +1,91 @@
+!!! 5
+html(lang='it')
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title alessiozappa.com
+    meta(name='description', content='Alessio Edoardo Zappa - Media Designer')
+    meta(name='robots', content='index,follow')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0')
+    meta(name='format-detection', content='telephone=no')
+    link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css', media='screen')
+    link(rel='stylesheet', type='text/css', href='css/site.css', media='screen')
+    //if lt IE 9
+      script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
+      script
+        window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\\/script>')
+  
+  body
+
+    //if lt IE 7
+      p.chromeframe You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
+
+    #container.container-fluid
+
+      .row-fluid
+
+        #sidebar.span4
+
+          img#logo(src='img/logo.png', alt='Alessio Edoardo Zappa')
+          
+          br
+          br
+
+          h1.blu Alessio Edoardo Zappa
+          p
+            span.giallo Co-founder 
+            span.grigio / 
+            span.rosso Web Hunter 
+            span.grigio at
+            br
+            a(href='http://www.plasticpanda.com', target='_blank')
+              img#plastic(src='img/plastic.png', alt='Plastic Panda snc')
+
+        #main.span5
+
+          h1.verde skills
+          ul
+            li 
+              span.rosso html5 / css3 
+              span.grigio + 
+              span.rosso jade / stylus
+            li
+              span.rosso javascript
+              span.grigio + 
+              span.rosso jQuery
+            li
+              span.rosso php 
+              span.grigio + 
+              span.rosso kirby toolkit
+            li 
+              span.rosso python 
+              span.grigio + 
+              span.rosso django framework
+            li 
+              span.rosso nodejs 
+              span.grigio + 
+              span.rosso express framework
+            li 
+              span.giallo flash
+            li
+              span.giallo photoshop
+            li
+              span.giallo illustrator
+            li 
+              a(href='CV_AlessioZappa.pdf') download my resume
+
+          br
+          br
+
+          h1.verde contacts
+          ul
+            li 
+              span.blu alessio@plasticpanda.com
+            li 
+              span.blu +39 3669797697
+      
+    script(type='text/javascript')
+      setTimeout(function () { 
+        window.scrollTo(0, 1);
+      }, 100);

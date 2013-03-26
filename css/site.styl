@@ -1,0 +1,85 @@
+@import('nib')
+
+global-reset()
+
+imported-fonts(_family, _directory, _filename, _weight, _style)
+  font-family _family
+  src url(_directory+_filename+'.eot')
+  src url(_directory+_filename+'.eot?#iefix') format('embedded-opentype'), url(_directory+_filename+'.woff') format('woff'), url(_directory+_filename+'.ttf') format('truetype'), url(_directory+_filename+'.svg#'+_family) format('svg')
+  font-weight _weight
+  font-style _style
+
+@font-face {
+  imported-fonts('Source Code','../font/','sourcecodepro-light',400,normal)
+}
+
+_font = #343838;
+_blu = #4271ae;
+_verde = #718c00;
+_viola = #8959a8;
+_rosso = #c82829;
+_giallo = #eab700;
+_grigio = #999;
+
+.giallo
+  color _giallo
+.rosso
+  color _rosso
+.blu
+  color _blu
+.verde
+  color _verde
+.viola
+  color _viola
+.grigio
+  color _grigio
+
+body, html
+  min-height 100%
+  width 100%
+
+body
+  font-family 'Source Code','Courier',monospace
+  background #fff
+  -webkit-overflow-scrolling touch
+  color _font
+  font-size 13px
+  line-height 18px
+
+  #container
+    text-align left
+    padding 15px
+
+    h1
+      font-size 26px
+      line-height 32px
+      margin-bottom 5px
+
+    a,
+    a:link,
+    a:visited,
+    a:active
+      color _blu
+
+    #sidebar
+      padding-right 6.382978723404255%
+    #main
+      border-left 1px dotted rgba(_grigio, 0.2)
+      padding-left 6.382978723404255%
+
+#logo
+  width 150px
+  height auto
+
+#plastic
+  width 170px
+  height auto
+
+@media only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi)
+  #logo
+    width 300px
+    height auto
+
+  #plastic
+    width 340px
+    height auto
