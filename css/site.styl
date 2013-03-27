@@ -1,5 +1,7 @@
 @import('nib')
 
+global-reset()
+
 imported-fonts(_family, _directory, _filename, _weight, _style)
   font-family _family
   src url(_directory+_filename+'.eot')
@@ -41,7 +43,7 @@ body
   background #fff
   -webkit-overflow-scrolling touch
   color _font
-  font-size 13px
+  font-size 14px
   line-height 18px
 
   #container
