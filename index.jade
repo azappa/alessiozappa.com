@@ -1,87 +1,67 @@
-!!! 5
-html(lang='it')
+doctype html
+html
 
   head
+    title :: alessiozappa.com ::
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    title alessiozappa.com
-    meta(name='description', content='Alessio Edoardo Zappa - Media Designer')
-    meta(name='robots', content='index,follow')
-    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0')
-    meta(name='format-detection', content='telephone=no')
-    link(rel='stylesheet', type='text/css', href='css/site.css', media='screen')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.4.2/pure-min.css')
+    link(rel='stylesheet', href='static/css/style.css')
+
     //if lt IE 9
       script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
-      script
-        window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\\/script>')
-  
+      script.
+        window.html5 || document.write('<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"><\\/script>')
+
   body
+    header
+      .container
+        .padding
+          | &nbsp;
+    
+    #main
+      #bio.container
+        .padding
+          :markdown
+            ## bio ##
 
-    //if lt IE 7
-      p.chromeframe You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
+            Sushi and Sashimi eater, Spritz drinker, OnePage websites lover, Manga reader, Sublime Text and (hot) tea addicted.
 
-    #container
+            Also a heavy hitting web designer [who loves pushing code](http://github.com/azappa?tab=repositories).
 
-      img#logo(src='img/logo.png', alt='Alessio Edoardo Zappa')
-      
-      br
-      br
+            Currently a senior media designer, web hunter and a [Plastic Panda](http://www.plasticpanda.com) founder.
 
-      h1 Alessio Edoardo Zappa
-      p
-        span.verde Co-founder 
-        span.grigio / 
-        span.verde Web Hunter 
-        span.grigio at
-        br
-        a(href='http://www.plasticpanda.com', target='_blank')
-          img#plastic(src='img/plastic.png', alt='Plastic Panda snc')
+      .separator.container
+        .padding
+          hr
 
-      br
-      br
+      #skills.container
+        .padding
+          :markdown
+            ## skills ##
 
-      h1 skills
-      ul
-        li 
-          span.rosso html5 / css3 
-          span.grigio + 
-          span.rosso jade / stylus
-        li
-          span.rosso javascript 
-          span.grigio + 
-          span.rosso jQuery
-        li
-          span.rosso php 
-          span.grigio + 
-          span.rosso kirby toolkit
-        li 
-          span.rosso python 
-          span.grigio + 
-          span.rosso django framework
-        li 
-          span.rosso nodejs 
-          span.grigio + 
-          span.rosso express framework
-        li 
-          span.giallo flash
-        li
-          span.giallo photoshop
-        li
-          span.giallo illustrator
-        li 
-          a(href='CV_AlessioZappa.pdf') download my resume
+            - <span>html5 & css3 with [jade](http://jade-lang.com/) & [stylus](http://learnboost.github.io/stylus/)</span>
+            - <span>javascript (vanilla and [jquery](http://jquery.com/))</span>
+            - <span>php with [kirby toolkit](http://toolkit.getkirby.com/) & [wordpress](http://wordpress.org/)</span>
+            - <span>python with [django framework](https://www.djangoproject.com/)</span>
+            - <span>nodejs with vanilla javascript & [expressjs](http://expressjs.com/)</span>
+            - <span>adobe suite with flash (as2 & as3), photoshop and a little bit of illustrator and indesign</span>
 
-      br
-      br
+      .separator.container
+        .padding
+          hr
 
-      h1 contacts
-      ul
-        li 
-          span.blu alessio@plasticpanda.com
-        li 
-          span.blu +39 3669797397
-      
-    script(type='text/javascript')
-      setTimeout(function () { 
-        window.scrollTo(0, 1);
-      }, 100);
+      #contacts.container
+        .padding
+          :markdown
+            ## contacts ##
+
+            - <span>[email @alessioedoardozappa](mailto:alessioedoardozappa@gmail.com)</span>
+            - <span>+393669797397</span>
+            - <span>[download my resume](CV_AlessioZappa.pdf)</span>
+
+    footer
+      .container
+        .padding
+          | &nbsp;
