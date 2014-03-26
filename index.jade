@@ -18,8 +18,12 @@ html
     header
       .container
         .padding
-          | &nbsp;
-    
+          p.tc
+            img#logo(src='static/img/logo.png', alt='Alessio Zappa - Senior Media Designer')
+
+    .separator.container
+      .padding
+
     #main
       #bio.container
         .padding
@@ -61,7 +65,12 @@ html
             - <span>+393669797397</span>
             - <span>[download my resume](CV_AlessioZappa.pdf)</span>
 
+      .separator.container
+        .padding
+
     footer
       .container
         .padding
-          | &nbsp;
+          .tc
+            :markdown
+              built with &hearts; in Milan using <br />[Sublime Text](http://www.sublimetext.com/), [jade](http://jade-lang.com/) & [stylus](http://learnboost.github.io/stylus/)

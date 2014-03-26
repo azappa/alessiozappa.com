@@ -87,6 +87,11 @@ body
 
   .padding
     padding _paddingLR
+
+  header
+    img#logo
+      width (360px / 2)
+      height (360px / 2)
     
   #main
     .container
@@ -129,18 +134,20 @@ body
           background rgba(_ligthblue, 0.5)
           margin 50px auto
 
+  footer
+    font-size 18px
+    br
+      display none
+
 
 _containerWidth = 90%
 //  - media queries -
-@media screen and (max-width: 959px)
+@media screen and (max-width: 767px)
   body
     
     .container
       width _containerWidth
 
-
-@media screen and (max-width: 767px)
-  body
-
-    .container
-      width _containerWidth
+    footer
+      br
+        display block
