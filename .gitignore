@@ -1,0 +1,6 @@
+*.log
+.DS_Store
+.AppleDouble
+node_modules
+dist
+.yarnclean
