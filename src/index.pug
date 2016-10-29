@@ -1,77 +1,45 @@
-doctype html
-html
+extends _layout
 
-  head
-    title alessiozappa.com
+block app
+  .c
+    .p
+      .spacer-40
 
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+      #bio
+        :markdown-it
+          ## bio ##
+          Sushi and Sashimi eater, Spritz drinker, OnePage websites lover, Manga reader, Sublime Text and (hot) tea addicted.  
+          Also a heavy hitting web designer who loves pushing code on [github](http://github.com/azappa?tab=repositories) and bitbucket.  
+          Currently a senior design and developer plus a [Plastic Panda](http://www.plasticpanda.com) founder.
 
-    //- Basic SEO improvements
-    meta(name='keywords', content='webmaster, webdesigner, frontend, backend, developer, html, css, pug, stylus')
-    meta(name='author', content='Alessio Zappa')
-    meta(name='description', content='Personal website')
-    meta(name='google-site-verification', content='')
+      .spacer-20
 
-    //- Open Graph protocol - Discover more at http://ogp.me/
-    meta(property='og:title', content='')
-    meta(property='og:url', content='')
-    meta(property='og:description', content='')
-    meta(property='og:image', content='')
-
-    //- CDN stuff
-    link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css')
-    link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css')
-
-    link(rel='stylesheet' href='/css/style.css')
-
-    //- Cross-platform favicon resources - Discover more at https://realfavicongenerator.net/blog/favicon-why-youre-doing-it-wrong/
-    meta(name='msapplication-TileColor' content='#AAAAAA')
-    meta(name='msapplication-TileImage' content='/img/mstile-icon.png')
-    link(rel='apple-touch-icon' href='/img/apple-touch-icon.png')
-    link(rel='shortcut icon' href='/img/favicon.ico')
-    link(rel='icon' href='/img/favicon.png' type='image/png')
-
-  body
-    .c
-      .p
-        .spacer-40
-
-        #bio
-          :markdown-it
-            ## bio ##
-            Sushi and Sashimi eater, Spritz drinker, OnePage websites lover, Manga reader, Sublime Text and (hot) tea addicted.  
-            Also a heavy hitting web designer who loves pushing code on [github](http://github.com/azappa?tab=repositories) and bitbucket.  
-            Currently a senior design and developer plus a [Plastic Panda](http://www.plasticpanda.com) founder.
+      #skills
+        :markdown-it
+          ## skills ##
+          - HTML & CSS with [pug](https://pugjs.org/) & [stylus](http://stylus-lang.com/)
+          - Javascript (vanilla and [jQuery](http://jquery.com/))
+          - NodeJS with vanilla Javascript, babeljs (es2015, es2017), [expressjs](http://expressjs.com/), [koajs](http://koajs.com/) and a little bit of [ReactJS](https://facebook.github.io/react/)
+          - serverless sites with [Prismic.io](https://prismic.io/) and AWS Lambdas using [dawson](https://github.com/lusentis/dawson)
+          - MySQL & [mongoDB](https://www.mongodb.com)
+          - PHP with [kirby](https://getkirby.com/) & [wordpress](http://wordpress.org/) for simple websites / theming
+          - a little bit of Python with [django framework](https://www.djangoproject.com/)
+          - photoshop and basics of illustrator and indesign
 
         .spacer-20
 
-        #skills
+        #contacts
           :markdown-it
-            ## skills ##
-            - HTML & CSS with [pug](https://pugjs.org/) & [stylus](http://stylus-lang.com/)
-            - Javascript (vanilla and [jQuery](http://jquery.com/))
-            - NodeJS with vanilla Javascript, babeljs (es2015, es2017), [expressjs](http://expressjs.com/), [koajs](http://koajs.com/) and little bits of [ReactJS](https://facebook.github.io/react/)
-            - serverless sites with [Prismic.io](https://prismic.io/) and AWS Lambdas using [dawson](https://github.com/lusentis/dawson)
-            - MySQL & [mongoDB](https://www.mongodb.com)
-            - PHP with [kirby](https://getkirby.com/) & [wordpress](http://wordpress.org/) for simple websites / theming
-            - a little bit of Python with [django framework](https://www.djangoproject.com/)
-            - photoshop and little bits of illustrator and indesign
+            ## contacts ##
+            - [email @alessioedoardozappa](mailto:alessioedoardozappa@gmail.com)
+            - +393669797397
+            - [download my resume](CV_AlessioZappa.pdf)
 
-          .spacer-20
+        .spacer-20
 
-          #contacts
-            :markdown-it
-              ## contacts ##
-              - [email @alessioedoardozappa](mailto:alessioedoardozappa@gmail.com)
-              - +393669797397
-              - [download my resume](CV_AlessioZappa.pdf)
+        #footer
+          :markdown-it
+            built with &hearts; in Milan using  
+            [Sublime Text](http://www.sublimetext.com/), [pug](https://pugjs.org/), [stylus](http://stylus-lang.com/) & [gulp](http://gulpjs.com/)
 
-          .spacer-20
-
-          #footer
-            :markdown-it
-              built with &hearts; in Milan using  
-              [Sublime Text](http://www.sublimetext.com/), [pug](https://pugjs.org/), [stylus](http://stylus-lang.com/) & [gulp](http://gulpjs.com/)
-
-          .spacer-40
+        .spacer-40
