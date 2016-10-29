@@ -3,10 +3,12 @@ const del = require('del');
 const plumber = require('gulp-plumber');
 const connect = require('gulp-connect');
 const pug = require('gulp-pug');
+const pugInheritance = require('gulp-pug-inheritance');
 const stylus = require('gulp-stylus');
 const nib = require('nib');
 const rupture = require('rupture');
 const changed = require('gulp-changed');
+const filter = require('gulp-filter');
 const deploy = require('gulp-gh-pages');
 
 
@@ -32,6 +34,8 @@ gulp.task('layout', () => (
     ])
     .pipe(changed('./dist', { extension: '.html' }))
     .pipe(plumber())
+    .pipe(pugInheritance({ basedir: 'src' }))
+    .pipe(filter(file => (!/\/_/.test(file.path) && !/^_/.test(file.relative))))
     .pipe(pug())
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload())
