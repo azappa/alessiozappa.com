@@ -1,6 +1,65 @@
 extends _layout
 
+block bodyClass
+  - bodyClass = 'cv-page';
+
 block app
   .c
     .p
-      h1 command+p and save pdf.
+      :markdown-it
+        ## alessio edoardo zappa
+        - 15 ottobre 1984  
+        - via Verdi 131/F, 20831, Seregno (MB)  
+        - m. +393669797397  
+        - e. [alessioedoardozappa@gmail.com](mailto:alessioedoardozappa@gmail.com)  
+        - italiano madrelingua  
+        - inglese buono  
+
+        ---
+
+        ### formazione & istruzione
+        - Diploma di Media Design presso **Istituto Europeo di Design**, Milano (100/100)  
+          _ottobre 2008 - luglio 2011_
+        - Corso base di C, SQL e Java presso **Accenture Technology Solutions**,
+          Milano  
+          _giugno - agosto 2008_
+        - Corso di Webdesign presso la **New People Team**, Milano  
+          _febbraio - marzo 2008_
+        - Diploma di Ragioniere Programmatore presso **ITC Martino Bassi**, Seregno (90/100)  
+          _settembre 1998 - luglio 2003_
+
+        --- 
+
+        ### esperienze lavorative
+        - Co-founder & senior Media Designer presso **Plastic Panda snc**, Milano  
+          _luglio 2012 - attualmente_
+        - Webdesigner, Flash & Web developer presso **Levity srl**, Milano  
+          _novembre 2011 - luglio 2012_
+        - Webdesigner / Web developer presso **BETASTUDIOS srl**, Gallarate (VA)  
+          _settembre 2009 - novembre 2011_
+        - Webdesigner / Flash Developer presso **DBMedia**, Seregno (MB)  
+          _maggio 2008 - giugno 2008_
+        - Data entry presso **Shop.it**, Macherio (MB)  
+          _luglio 2007 - agosto 2007_
+
+        ---
+
+        ### competenze
+        - HTML5 & CSS3  
+        - Javascript (vanilla JS, [jQuery](https://jquery.com/))  
+        - NodeJS ([ExpressJS](http://expressjs.com/), [KoaJS](http://koajs.com/), [BabelJS](http://babeljs.io/), [AWS Lambda](https://aws.amazon.com/it/lambda/)) e [MongoDB](https://www.mongodb.com/)  
+        - PHP ([Wordpress](https://wordpress.org/), [KirbyCMS](https://getkirby.com/))  
+        - Python ([Django](https://www.django-cms.org/en/))  
+        - Photoshop, Illustrator, inDesign
+        - ambienti di sviluppo: OsX e Linux ([Ubuntu Gnome](https://ubuntugnome.org/), [Bunsenlabs](https://www.bunsenlabs.org/), [Fedora](https://getfedora.org/it/))
+
+        --- 
+
+        ### altro
+        - lettura ([Haruki Murakami](https://it.wikipedia.org/wiki/Haruki_Murakami), [Chuck Palahniuk](https://it.wikipedia.org/wiki/Chuck_Palahniuk), ...) e [manga](https://it.wikipedia.org/wiki/Manga) ([shōnen](https://it.wikipedia.org/wiki/Sh%C5%8Dnen), [shōjo](https://it.wikipedia.org/wiki/Sh%C5%8Djo), [manhwa](https://it.wikipedia.org/wiki/Manhwa), ...)
+        - serie tv ([Breaking Bad](https://it.wikipedia.org/wiki/Breaking_Bad_-_Reazioni_collaterali), [Dexter](https://it.wikipedia.org/wiki/Dexter_(serie_televisiva)), [Mr. Robot](https://it.wikipedia.org/wiki/Mr._Robot), ...)  
+        - musica ([MIYAVI](https://it.wikipedia.org/wiki/Miyavi), [The Smashing Pumpkins](https://it.wikipedia.org/wiki/The_Smashing_Pumpkins), [A Perfect Circle](https://it.wikipedia.org/wiki/A_Perfect_Circle), [The Cure](https://it.wikipedia.org/wiki/The_Cure), ...)
+
+        --- 
+
+        > Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base all'art. 13 del D. Lgs. 196/2003
