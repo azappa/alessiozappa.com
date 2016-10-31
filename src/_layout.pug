@@ -1,9 +1,11 @@
+- let bodyClass = ''
+block bodyClass
+
 doctype html
 html
 
   head
-    title alessiozappa.com ||||
-
+    title alessiozappa.com
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
 
@@ -32,5 +34,5 @@ html
     link(rel='shortcut icon' href='/img/favicon.ico')
     link(rel='icon' href='/img/favicon.png' type='image/png')
 
-  body
+  body(class=bodyClass)
     block app
