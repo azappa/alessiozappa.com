@@ -63,9 +63,18 @@ gulp.task('style', () => (
 ));
 
 
+gulp.task('cv', () => (
+  gulp
+    .src(['./src/CV_AlessioZappa.pdf'])
+    .pipe(plumber())
+    .pipe(gulp.dest('./dist'))
+));
+
+
 gulp.task('watch', () => {
   gulp.watch('./src/*.pug', ['layout']);
   gulp.watch('./src/css/*.styl', ['style']);
+  gulp.watch('./src/CV_AlessioZappa.pdf', ['cv']);
 });
 
 
@@ -79,5 +88,5 @@ gulp.task('deploy', () => (
 ));
 
 
-gulp.task('default', ['clean', 'layout', 'style', 'watch', 'serve']);
+gulp.task('default', ['clean', 'layout', 'style', 'cv', 'watch', 'serve']);
 gulp.task('deploy', ['default', 'deploy']);
