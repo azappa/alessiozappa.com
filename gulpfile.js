@@ -71,22 +71,30 @@ gulp.task('cv', () => (
 ));
 
 
+gulp.task('cname', () => (
+  gulp
+    .src(['./CNAME'])
+    .pipe(gulp.dest('./dist'))
+));
+
+
 gulp.task('watch', () => {
   gulp.watch('./src/*.pug', ['layout']);
   gulp.watch('./src/css/*.styl', ['style']);
   gulp.watch('./src/CV_AlessioZappa.pdf', ['cv']);
+  gulp.watch('./CNAME', ['cname']);
 });
 
 
 gulp.task('deploy', () => (
   gulp
-    .src([
-      './dist/**/*',
-      './CNAME',
-    ])
-    .deploy()
+    .src('./dist/**/*')
+    .pipe(
+      deploy()
+    )
 ));
 
 
-gulp.task('default', ['clean', 'layout', 'style', 'cv', 'watch', 'serve']);
-gulp.task('deploy', ['default', 'deploy']);
+gulp.task('default', ['clean', 'layout', 'style', 'cv', 'cname', 'watch', 'serve']);
+gulp.task('build', ['clean', 'layout', 'style', 'cv', 'cname']);
+gulp.task('gh', ['deploy']);
