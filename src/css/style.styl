@@ -50,6 +50,18 @@ h4, h5, h6
   
 .c
   max-width 560px
+
+#head
+  & > *
+    display inline-block
+    vertical-align middle
+    margin-left 20px
+    &:first-child
+      margin-left 0
+  img#top-logo
+    border none
+    width (472px / 8)
+    height @width
   
 ol,
 ul
@@ -58,6 +70,23 @@ ul
   padding 0
   li
     margin-left 1.4em
+    
++below('sm')
+  #head
+    text-align center
+    & > *
+      display block
+      margin 0 auto 20px auto
+      &:last-child
+        margin-bottom 0px
+    img#top-logo
+      width (472px / 4)
+      height auto
+      max-width 100%
+      margin-left auto
+      margin-right auto
+    h2
+      @extends h1
     
 body.cv-page
   
