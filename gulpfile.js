@@ -53,12 +53,23 @@ gulp.task('style', () => (
       stylus({
         compress: true,
         use: [
-          nib(),
-          rupture(),
+          nib(), rupture(),
         ],
       })
     )
     .pipe(gulp.dest('./dist/css'))
+    .pipe(connect.reload())
+));
+
+
+gulp.task('imgs', () => (
+  gulp
+    .src([
+      './src/img/**/*',
+    ])
+    .pipe(changed('./dist/img'))
+    .pipe(plumber())
+    .pipe(gulp.dest('./dist/img'))
     .pipe(connect.reload())
 ));
 
@@ -81,6 +92,7 @@ gulp.task('cname', () => (
 gulp.task('watch', () => {
   gulp.watch('./src/*.pug', ['layout']);
   gulp.watch('./src/css/*.styl', ['style']);
+  gulp.watch('./src/img/**/*', ['imgs']);
   gulp.watch('./src/CV_AlessioZappa.pdf', ['cv']);
   gulp.watch('./CNAME', ['cname']);
 });
@@ -89,12 +101,10 @@ gulp.task('watch', () => {
 gulp.task('deploy', () => (
   gulp
     .src('./dist/**/*')
-    .pipe(
-      deploy()
-    )
+    .pipe(deploy())
 ));
 
 
-gulp.task('default', ['clean', 'layout', 'style', 'cv', 'cname', 'watch', 'serve']);
-gulp.task('build', ['clean', 'layout', 'style', 'cv', 'cname']);
+gulp.task('default', ['clean', 'layout', 'style', 'imgs', 'cv', 'cname', 'watch', 'serve']);
+gulp.task('build', ['clean', 'layout', 'style', 'imgs', 'cv', 'cname']);
 gulp.task('gh', ['deploy']);
